@@ -1,4 +1,4 @@
-### Configurar tailwind para o form
+### Configurar tailwind
 
 ```css
 @source "../../node_modules/@cristianocarlos/formigo/dist/**/*.{js}";

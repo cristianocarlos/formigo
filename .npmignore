@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Development files
+src/
+
+# Configuration
+.env
+.env.local
+.npmrc
+tsconfig.json
+vite.config.js
+
+# Git/VCS
+.git/
+.gitignore
+.gitattributes
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Documentation
+_aux/
+
+# Other
+.editorconfig
+.prettierrc.json
+eslint.config.js
