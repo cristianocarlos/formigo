@@ -1,0 +1,13 @@
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+/.codex
+/.cursor/
+/.idea
+/.vscode
+/.zed
+/dist
+/node_modules
+_ide_helper.php
