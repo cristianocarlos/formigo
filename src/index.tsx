@@ -7,6 +7,7 @@ import CheckTable from './lib/components/check-table/CheckTable';
 import CheckBox from './lib/components/check/CheckBox';
 import CheckSwitch from './lib/components/check/CheckSwitch';
 import CloudflareTurnstile from './lib/components/CloudflareTurnstile';
+import {COMBO_OR_SUGGEST_VALUE_KEYS} from './lib/components/combo-or-suggest/attributesHelper';
 import ComboBox from './lib/components/combo-or-suggest/ComboBox';
 import ComboSelect from './lib/components/combo-or-suggest/ComboSelect';
 import SuggestBox from './lib/components/combo-or-suggest/SuggestBox';
@@ -37,7 +38,7 @@ import Formigo from './lib/Formigo';
 import FormigoBootstrap from './lib/FormigoBootstrap';
 import {CHECK_BOOL_TRUE} from './lib/utils/checkOrRadio';
 import {PHONE_GROUP_KEYS} from './lib/utils/phoneHelper';
-import {useHandleFetchSubmit} from './lib/utils/submitHooks';
+import {useHandleFetchSubmit, useHandleValidateSubmit} from './lib/utils/submitHooks';
 import {passwordRepeatValidator} from './lib/utils/validators';
 import {useFormigoContextIsNewRecord, useFormigoContextModelValues} from './lib/utils/withContext';
 import {
@@ -81,6 +82,7 @@ export {
   CheckSwitch,
   CheckTable,
   CloudflareTurnstile,
+  COMBO_OR_SUGGEST_VALUE_KEYS,
   ComboBox,
   ComboSelect,
   CpfInput,
@@ -115,6 +117,7 @@ export {
   useFormigoContextIsNewRecord,
   useFormigoContextModelValues,
   useHandleFetchSubmit,
+  useHandleValidateSubmit,
   useSelectorFormigoAttrIsChecked,
   useSelectorFormigoAttrValue,
   useStoreFormigoAttrGetValue,
