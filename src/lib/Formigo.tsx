@@ -9,7 +9,7 @@ export type TFormigoProps = {
   children?: ReactNode;
   className?: string;
   method?: string;
-  ref?: RefObject<HTMLFormElement>;
+  ref?: RefObject<HTMLFormElement | null>;
 };
 
 export default function Formigo(props: TFormigoProps) {

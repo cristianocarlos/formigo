@@ -15,7 +15,7 @@ export default function FilledOptions({className = '', disabledOptions, wrapperC
         const htmlInputProps = resolveOptionProps(valueAsString(data.id));
         return (
           <label
-            className={`has-checked:bg-formigo--theme flex cursor-pointer items-center justify-center border border-gray-300 has-checked:border-transparent has-checked:text-white ${className}`}
+            className={`has-checked:bg-formigo--theme text-formigo--readable flex cursor-pointer items-center justify-center border border-gray-300 has-checked:border-transparent has-checked:text-white ${className}`}
             key={htmlInputProps.value}
             style={
               isOldBrowser ? (htmlInputProps.checked ? {background: '#155dfc', color: 'white'} : undefined) : undefined

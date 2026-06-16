@@ -12,7 +12,7 @@ export default function BoxOption(props: TCheckBoxOptionProps) {
   const {className = '', dataType, hiddenElement, isOldBrowser, label, ...htmlInputProps} = props;
   return (
     <label
-      className={`flex w-fit items-center gap-2 text-gray-600 has-disabled:opacity-60 ${className}`}
+      className={`text-formigo--readable flex w-fit items-center gap-2 has-disabled:opacity-60 ${className}`}
       data-type={dataType}
     >
       {hiddenElement}

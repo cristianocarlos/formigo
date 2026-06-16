@@ -1,5 +1,7 @@
 // import './styles.css'; // não funciona essa bosta
 
+import {getBrowserInfo} from '@/utils/globals';
+
 import Address from './lib/components/address/Address';
 import ButtonSet from './lib/components/ButtonSet';
 import CheckGroup from './lib/components/check-group/CheckGroup';
@@ -38,10 +40,11 @@ import Formigo from './lib/Formigo';
 import FormigoBootstrap from './lib/FormigoBootstrap';
 import {CHECK_BOOL_TRUE} from './lib/utils/checkOrRadio';
 import {PHONE_GROUP_KEYS} from './lib/utils/phoneHelper';
-import {useHandleFetchSubmit, useHandleValidateSubmit} from './lib/utils/submitHooks';
+import {customActionSubmit, useHandleFetchSubmit, useHandleValidateSubmit} from './lib/utils/submitHooks';
 import {passwordRepeatValidator} from './lib/utils/validators';
 import {useFormigoContextIsNewRecord, useFormigoContextModelValues} from './lib/utils/withContext';
 import {
+  useDispatchFormigoAttrObjectMergeValue,
   useDispatchFormigoAttrSetValue,
   useDispatchFormigoProduceFormState,
   useSelectorFormigoAttrIsChecked,
@@ -53,25 +56,44 @@ import {zustandFormigoGetData, zustandFormigoInputSetServerErrors} from './lib/z
 import type {TDeleteButtonProps} from './lib/components/DeleteButton';
 import type {TFormigoProps} from './lib/Formigo';
 import type {TAddressProps} from './lib/types/address';
+import type {TCheckProps} from './lib/types/check';
 import type {
   TCheckGroupDerivableOptionsResolverParams,
   TCheckGroupProps,
   TCheckGroupValue,
 } from './lib/types/checkGroup';
-import type {TComboBoxProps} from './lib/types/comboOrSuggest';
+import type {
+  TComboBoxProps,
+  TComboOrSuggestPickedData,
+  TComboOrSuggestRefComponent,
+  TComboSelectProps,
+  TSuggestBoxProps,
+} from './lib/types/comboOrSuggest';
 import type {
   TFormigoAttribute,
   TFormigoFormFeatures,
   TFormigoValidatorBaseCallerProps,
   TFormigoValidatorGetAttrValue,
 } from './lib/types/formigo';
-import type {TCurrencyInputProps, TInputRefComponent} from './lib/types/input';
+import type {
+  TCpfInputProps,
+  TCurrencyInputProps,
+  TDateHourInputProps,
+  TInputRefComponent,
+  TPasswordInputProps,
+  TTextInputProps,
+} from './lib/types/input';
+import type {TInputGroupProps, TInputGroupValue} from './lib/types/inputGroup';
 import type {
   TRadioGroupDerivableOptionsResolverParams,
   TRadioGroupProps,
   TRadioGroupValue,
 } from './lib/types/radioGroup';
 import type {TFormigoSubmitEvent, TFormigoSubmitEventHandler} from './types/common';
+
+if (typeof window !== 'undefined') {
+  window.formigoBrowserInfo = getBrowserInfo();
+}
 
 export {
   Address,
@@ -87,6 +109,7 @@ export {
   ComboSelect,
   CpfInput,
   CurrencyInput,
+  customActionSubmit,
   DateHourInput,
   DateInput,
   DeleteButton,
@@ -112,6 +135,7 @@ export {
   SuggestSelect,
   TextArea,
   TextInput,
+  useDispatchFormigoAttrObjectMergeValue,
   useDispatchFormigoAttrSetValue,
   useDispatchFormigoProduceFormState,
   useFormigoContextIsNewRecord,
@@ -129,8 +153,14 @@ export type {
   TCheckGroupDerivableOptionsResolverParams,
   TCheckGroupProps,
   TCheckGroupValue,
+  TCheckProps,
   TComboBoxProps,
+  TComboOrSuggestPickedData,
+  TComboOrSuggestRefComponent,
+  TComboSelectProps,
+  TCpfInputProps,
   TCurrencyInputProps,
+  TDateHourInputProps,
   TDeleteButtonProps,
   TFormigoAttribute,
   TFormigoFormFeatures,
@@ -139,10 +169,15 @@ export type {
   TFormigoSubmitEventHandler,
   TFormigoValidatorBaseCallerProps,
   TFormigoValidatorGetAttrValue,
+  TInputGroupProps,
+  TInputGroupValue,
   TInputRefComponent,
+  TPasswordInputProps,
   TRadioGroupDerivableOptionsResolverParams,
   TRadioGroupProps,
   TRadioGroupValue,
+  TSuggestBoxProps,
+  TTextInputProps,
 };
 
 export default Formigo;

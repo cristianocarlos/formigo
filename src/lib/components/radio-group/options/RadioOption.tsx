@@ -8,7 +8,7 @@ type TDefaultOptionProps = Omit<ComponentProps<'input'>, 'readOnly'> & {
 
 export default function RadioOption({className = '', isOldBrowser, label, ...htmlInputProps}: TDefaultOptionProps) {
   return (
-    <label className={`flex w-fit items-center gap-2 text-gray-600 has-disabled:opacity-60 ${className}`}>
+    <label className={`text-formigo--readable flex w-fit items-center gap-2 has-disabled:opacity-60 ${className}`}>
       <input {...htmlInputProps} className="peer absolute -left-2499.75 opacity-0" type="radio" />
       <div className="flex size-5 items-center justify-center rounded-full border border-gray-300 peer-focus:shadow peer-checked:[&>em]:block">
         <em

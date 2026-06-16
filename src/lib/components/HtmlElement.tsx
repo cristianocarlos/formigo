@@ -7,7 +7,7 @@ const focusClassName = 'focus:not-read-only:enabled:border-formigo--theme peer';
 const disabldedClassName = 'disabled:bg-gray-100 disabled:opacity-70 disabled:select-none disabled:[&~*]:opacity-70';
 const readOnlyClassName = 'read-only:bg-gray-50 read-only:opacity-70 read-only:select-none';
 const commonClassName =
-  'transition-all duration-200 ease-in-out w-full rounded-sm border border-solid border-gray-300 bg-white text-gray-600 outline-0';
+  'transition-all duration-200 ease-in-out w-full rounded-sm border border-solid border-gray-300 bg-white text-formigo--readable outline-0';
 
 function Input({className = '', ...htmlProps}: ComponentProps<'input'>) {
   return (

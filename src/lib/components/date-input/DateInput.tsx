@@ -208,7 +208,7 @@ export default function DateInput(props: TDateInputProps) {
         </div>
       )}
       {hasAgeDesc ? (
-        <div className="absolute -bottom-3 px-1 text-[0.6rem] leading-none text-gray-600">
+        <div className="text-formigo--readable absolute -bottom-3 px-1 text-[0.6rem] leading-none">
           {formatAgeInWords(attrValue)}
         </div>
       ) : undefined}

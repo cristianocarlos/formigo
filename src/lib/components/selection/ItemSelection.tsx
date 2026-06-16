@@ -38,7 +38,7 @@ export default function ItemSelection(props: TItemSelectionProps) {
               <Hidden attribute={[...rowAttribute, 'label']} value={data.label} />
               <div className="flex items-center gap-1">
                 {data.label}
-                <span className="text-[0.5em] text-gray-600">{data.id}</span>
+                <span className="text-formigo--readable text-[0.5em]">{data.id}</span>
               </div>
             </>
           );

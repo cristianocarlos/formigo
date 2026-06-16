@@ -96,7 +96,7 @@ export default function Calendar(props: TCalendarProps) {
         </button>
       </div>
       <div className={`flex p-4 pb-3`}>
-        <table className="max-w-72 min-w-64 table-fixed text-center text-gray-600">
+        <table className="text-formigo--readable max-w-72 min-w-64 table-fixed text-center">
           <thead>
             <tr className="text-[0.64em] uppercase [&>th]:w-9">
               <th className="py-2 font-medium">{shortWeekDayNames[1]}</th>
@@ -111,7 +111,7 @@ export default function Calendar(props: TCalendarProps) {
           <tbody>{renderWeeks()}</tbody>
         </table>
         {typeof renderVerticalClock === 'function' ? (
-          <table className="ml-2 w-14 text-center text-gray-600">
+          <table className="text-formigo--readable ml-2 w-14 text-center">
             <thead>
               <tr className="text-[0.56em] uppercase">
                 <th className="py-2 font-medium">{YiiLang.formigo('labelCalendarHourary')}</th>

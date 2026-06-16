@@ -92,7 +92,7 @@ export default function CheckTable(props: TCheckTableProps) {
             <td className="border border-gray-200" />
             {cols.map((colData) => {
               return (
-                <td className="border border-gray-200 p-2 text-xs text-gray-600" key={colData.id}>
+                <td className="text-formigo--readable border border-gray-200 p-2 text-xs" key={colData.id}>
                   {colData.label}
                 </td>
               );
@@ -104,7 +104,7 @@ export default function CheckTable(props: TCheckTableProps) {
             const rowId = valueAsString(rowData.id);
             return (
               <tr key={rowId}>
-                <td className="border border-gray-200 p-2 text-gray-600">{rowData.label}</td>
+                <td className="text-formigo--readable border border-gray-200 p-2">{rowData.label}</td>
                 {cols.map((colData) => {
                   const colId = valueAsString(colData.id);
                   const id = `${initProps.id}_${rowId}_${colId}`;
