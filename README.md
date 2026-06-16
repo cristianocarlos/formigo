@@ -4,6 +4,7 @@
 @source "../../node_modules/@cristianocarlos/formigo/dist/**/*.{js}";
 
 @theme {
+    --color-formigo--readable: #4b5563;
     --color-formigo--theme: #0066b4;
 }
 
