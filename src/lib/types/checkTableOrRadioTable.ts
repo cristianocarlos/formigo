@@ -1,16 +1,16 @@
 import type {TFormigoElementBase1, TFormigoRefComponent} from '@/lib/types/formigo';
 import type {RefObject} from 'react';
 
-export type TCheckTableOrRadioTableValue = string;
+type TCheckTableOrRadioTableValue = string;
 
 export type TCheckTableValues = {[rowId: string]: {[colId: string]: TCheckTableOrRadioTableValue}};
 export type TRadioTableValues = {[rowId: string]: TCheckTableOrRadioTableValue};
 
-export type TCheckTableRefComponent = TFormigoRefComponent & {
+type TCheckTableRefComponent = TFormigoRefComponent & {
   replaceValue: (value?: TCheckTableValues) => void;
 };
 
-export type TRadioTableRefComponent = TFormigoRefComponent & {
+type TRadioTableRefComponent = TFormigoRefComponent & {
   replaceValue: (value?: TRadioTableValues) => void;
 };
 

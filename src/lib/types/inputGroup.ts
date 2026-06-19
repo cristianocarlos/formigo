@@ -9,7 +9,7 @@ import type {
 import type {PHONE_GROUP_ADDITIONAL_INPUT_KEYS} from '@/lib/utils/phoneHelper';
 import type {ReactNode, RefObject} from 'react';
 
-export type TInputGroupRefComponent = TFormigoRefComponent & {
+type TInputGroupRefComponent = TFormigoRefComponent & {
   replaceValue: <G>(items?: G) => void;
 };
 

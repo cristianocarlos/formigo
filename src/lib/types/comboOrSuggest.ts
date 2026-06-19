@@ -47,9 +47,9 @@ export type TComboOrSuggestPickedData = {
   [COMBO_OR_SUGGEST_VALUE_KEYS.value]?: string;
 };
 
-export type TComboOrSuggestPickHandler = (pickedData: TComboOrSuggestPickedData) => void;
+type TComboOrSuggestPickHandler = (pickedData: TComboOrSuggestPickedData) => void;
 
-export type TComboOrSuggestRefComponent<GOptionData = TComboOrSuggestOptions[number]> = Omit<
+type TComboOrSuggestRefComponent<GOptionData = TComboOrSuggestOptions[number]> = Omit<
   TFormigoRefComponent,
   'resetValue'
 > & {

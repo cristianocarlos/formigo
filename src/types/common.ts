@@ -14,7 +14,7 @@ import type {
 } from 'react';
 
 //
-export type TEnhancedKeyboardEvent<G> = KeyboardEvent<G> & {
+type TEnhancedKeyboardEvent<G> = KeyboardEvent<G> & {
   keyCode: number;
 };
 export type TInputBeforeInputEvent = SyntheticEvent<HTMLInputElement> & {
@@ -23,7 +23,7 @@ export type TInputBeforeInputEvent = SyntheticEvent<HTMLInputElement> & {
 };
 
 //
-export type TButtonMouseEvent = ReactMouseEvent<HTMLButtonElement>;
+type TButtonMouseEvent = ReactMouseEvent<HTMLButtonElement>;
 export type TButtonMouseEventHandler = ReactMouseEventHandler<HTMLButtonElement>;
 export type TFormigoSubmitEvent = TButtonMouseEvent;
 export type TFormigoSubmitEventHandler = TButtonMouseEventHandler;

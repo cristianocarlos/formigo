@@ -10,12 +10,12 @@ export type TSelectionContext = {
   rows?: Array<TSelectionData>;
 };
 
-export type TSelectionChooserRendererParams = {
+type TSelectionChooserRendererParams = {
   chooserAttribute: TSelectionContext['attribute'];
   handleAdd: TSelectionContext['handleAdd'];
 };
 
-export type TSelectionRowsRendererParams = {
+type TSelectionRowsRendererParams = {
   data: NonNullable<TSelectionContext['rows']>[number];
   rowAttribute: TSelectionContext['attribute'];
 };

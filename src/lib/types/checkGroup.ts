@@ -5,13 +5,11 @@ export type TCheckGroupCheckValue = string;
 
 export type TCheckGroupValue = Record<string, TCheckGroupCheckValue>; // {"1": "1", "2": "2"}
 
-export type TCheckGroupRefComponent = TFormigoRefComponent & {
+type TCheckGroupRefComponent = TFormigoRefComponent & {
   changeState: (checkValue: TCheckGroupCheckValue, isChecked: boolean) => void; // Marcar/desmarcar item
   checkAll: () => void; // Marcar todos
   replaceValue: (value?: TCheckGroupValue) => void;
 };
-
-export type TCheckGroupRefObject = RefObject<TCheckGroupRefComponent | undefined>;
 
 export type TCheckGroupOptionRows = Array<{
   id: number | string;
@@ -30,7 +28,7 @@ export type TCheckGroupProps<GOptionData = TCheckGroupOptionRows[number]> = TFor
   maxSize?: number; // Validator
   minSize?: number; // Validator
   options: Array<GOptionData>; // Opções
-  refComponent?: TCheckGroupRefObject; // Expõe algumas funções do componente para uso externo
+  refComponent?: RefObject<TCheckGroupRefComponent | undefined>; // Expõe algumas funções do componente para uso externo
 };
 
 export type TCheckGroupDerivableOptionsResolverParams<GOptionData = unknown> = {
@@ -39,5 +37,5 @@ export type TCheckGroupDerivableOptionsResolverParams<GOptionData = unknown> = {
   isCheckGroup?: boolean;
   options: Array<GOptionData>;
   printMode: TFormigoElementBase1['printMode'];
-  refComponent?: TCheckGroupRefObject;
+  refComponent?: TCheckGroupProps['refComponent'];
 };

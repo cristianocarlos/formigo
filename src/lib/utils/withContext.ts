@@ -20,7 +20,7 @@ export function useFormigoContext() {
   return context;
 }
 
-export function useFormigoContextRecordId() {
+function useFormigoContextRecordId() {
   return useFormigoContext().recordId;
 }
 

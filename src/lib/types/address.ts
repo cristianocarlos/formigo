@@ -4,7 +4,7 @@ import type {TTextInputProps} from '@/lib/types/input';
 import type {ADDRESS_KEYS} from '@/lib/utils/helper';
 import type {RefObject} from 'react';
 
-export type TAddressRefComponent = TFormigoRefComponent & {
+type TAddressRefComponent = TFormigoRefComponent & {
   replaceValue: (value?: TAddressValue) => void;
 };
 

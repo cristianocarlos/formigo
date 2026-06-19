@@ -15,7 +15,7 @@ import type {ReactElement, RefObject} from 'react';
 
 export type TInputRefHtmlButton = RefObject<HTMLButtonElement | null>;
 
-export type TInputRefComponent = TFormigoRefComponent & {
+type TInputRefComponent = TFormigoRefComponent & {
   inputFocus: (focusOptions?: FocusOptions) => void; // Focar no input
   replaceValue: (value?: string) => void;
 };
@@ -28,7 +28,7 @@ export type THiddenProps<GAttrValue = string | undefined> = {
   value?: string;
 };
 
-export type TInputBase = TFormigoElementBase1 &
+type TInputBase = TFormigoElementBase1 &
   TFormigoElementBase2 & {
     autoComplete?: 'new-password' | 'off'; // Atributo autoComplete
     dataType?: 'skip-url-query-string'; // Identificação adicional (ex. skip-url-query-string)

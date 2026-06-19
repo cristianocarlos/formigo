@@ -54,7 +54,6 @@ import {
 import {zustandFormigoGetData, zustandFormigoInputSetServerErrors} from './lib/zustand/store';
 
 import type {TDeleteButtonProps} from './lib/components/DeleteButton';
-import type {TFormigoProps} from './lib/Formigo';
 import type {TAddressProps} from './lib/types/address';
 import type {TCheckProps} from './lib/types/check';
 import type {
@@ -65,7 +64,6 @@ import type {
 import type {
   TComboBoxProps,
   TComboOrSuggestPickedData,
-  TComboOrSuggestRefComponent,
   TComboSelectProps,
   TSuggestBoxProps,
 } from './lib/types/comboOrSuggest';
@@ -79,11 +77,10 @@ import type {
   TCpfInputProps,
   TCurrencyInputProps,
   TDateHourInputProps,
-  TInputRefComponent,
   TPasswordInputProps,
   TTextInputProps,
 } from './lib/types/input';
-import type {TInputGroupProps, TInputGroupValue} from './lib/types/inputGroup';
+import type {TInputGroupProps} from './lib/types/inputGroup';
 import type {
   TRadioGroupDerivableOptionsResolverParams,
   TRadioGroupProps,
@@ -156,7 +153,6 @@ export type {
   TCheckProps,
   TComboBoxProps,
   TComboOrSuggestPickedData,
-  TComboOrSuggestRefComponent,
   TComboSelectProps,
   TCpfInputProps,
   TCurrencyInputProps,
@@ -164,14 +160,11 @@ export type {
   TDeleteButtonProps,
   TFormigoAttribute,
   TFormigoFormFeatures,
-  TFormigoProps,
   TFormigoSubmitEvent,
   TFormigoSubmitEventHandler,
   TFormigoValidatorBaseCallerProps,
   TFormigoValidatorGetAttrValue,
   TInputGroupProps,
-  TInputGroupValue,
-  TInputRefComponent,
   TPasswordInputProps,
   TRadioGroupDerivableOptionsResolverParams,
   TRadioGroupProps,

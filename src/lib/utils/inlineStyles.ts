@@ -15,4 +15,4 @@ export function resolveInputStyle(hasPrepend?: boolean, hasAppend?: boolean) {
   };
 }
 
-export {appendStyle, heightStyle, prependStyle, resolvedPadding, resolvedSize, size};
+export {appendStyle, heightStyle, prependStyle, resolvedPadding, resolvedSize};

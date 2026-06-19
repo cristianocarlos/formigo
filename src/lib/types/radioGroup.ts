@@ -3,11 +3,9 @@ import type {ReactElement, RefObject} from 'react';
 
 export type TRadioGroupValue = string;
 
-export type TRadioGroupRefComponent = TFormigoRefComponent & {
+type TRadioGroupRefComponent = TFormigoRefComponent & {
   replaceValue: (value?: TRadioGroupValue) => void;
 };
-
-export type TRadioGroupRefObject = RefObject<TRadioGroupRefComponent | undefined>;
 
 export type TRadioGroupOptionRows = Array<{
   id: number | string;
@@ -21,7 +19,7 @@ export type TRadioGroupProps<GOptionData = TRadioGroupOptionRows[number]> = TFor
   label?: null | string; // Label
   options: Array<GOptionData>; // Opções
   preventUncheck?: boolean; // Previne que seja desmarcado
-  refComponent?: TRadioGroupRefObject; // Expõe algumas funções do componente para uso externo
+  refComponent?: RefObject<TRadioGroupRefComponent | undefined>; // Expõe algumas funções do componente para uso externo
 };
 
 export type TRadioGroupDerivableOptionsResolverParams<GOptionData = unknown> = {
@@ -30,5 +28,5 @@ export type TRadioGroupDerivableOptionsResolverParams<GOptionData = unknown> = {
   isCheckGroup?: boolean;
   options: Array<GOptionData>;
   printMode: TFormigoElementBase1['printMode'];
-  refComponent?: TRadioGroupRefObject;
+  refComponent?: TRadioGroupProps['refComponent'];
 };

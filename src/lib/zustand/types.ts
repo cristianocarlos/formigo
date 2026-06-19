@@ -14,7 +14,7 @@ export type TZustandFormigoInputPrepareInitValue = string | TCheckGroupValue;
 
 export type TZustandFormigoFormProxyState = TImmerDraft<TZustandFormigoForms[string]>;
 
-export type TZustandFormigoProduceStateActions = {
+type TZustandFormigoProduceStateActions = {
   attrGetValueIn: <G = string>(
     formProxyState: TZustandFormigoFormProxyState,
     attribute: TFormigoAttribute,
@@ -82,7 +82,7 @@ export type TZustandFormigoValidatorState = {
 
 export type TZustandFormigoForms = Record<string, TZustandFormigoStateData>;
 
-export type TZustandFormigoStateData = {
+type TZustandFormigoStateData = {
   attr: Record<string, unknown>; // valores de cada atributo
   awarnessErrors?: {[attributeDashedKey: string]: unknown};
   feedback?: {message: string; success: boolean};
