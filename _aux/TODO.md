@@ -2,3 +2,4 @@
 - formigo--theme
 - formigo--*
 `
+investigar classes perdidas
