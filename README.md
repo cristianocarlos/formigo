@@ -4,20 +4,11 @@
 @source "../../node_modules/@cristianocarlos/formigo/dist/**/*.{js}";
 
 @theme {
-    --color-formigo--readable: #4b5563;
     --color-formigo--theme: #0066b4;
-}
-
-@utility formigo--z-input-lateral {
-    z-index: 1;
-}
-
-@utility formigo--z-input-picker {
-    z-index: 5;
-}
-
-@utility formigo--z-dialog {
-    z-index: 7;
+    --color-formigo--readable: #4b5563; /* #4B5563 gray-600 */
+    --z-formigo--input-lateral: 1;
+    --z-formigo--input-picker: 5;
+    --z-formigo--z-dialog: 7;
 }
 
 @utility formigo--button-primary {

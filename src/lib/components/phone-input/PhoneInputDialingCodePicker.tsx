@@ -45,7 +45,7 @@ export default function PhoneInputDialingCodePicker({countryDataParams, handleOu
   return (
     <SuggestBox
       attribute={['chooser'].concat(countryDataParams.attribute)}
-      className="formigo--z-input-picker absolute mb-0 min-w-60"
+      className="absolute z-[var(--z-formigo--input-picker)] mb-0 min-w-60"
       handlePick={handlePick}
       isInitOpen={true}
       itemFormatter={itemFormatter}

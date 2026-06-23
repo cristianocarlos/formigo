@@ -17,7 +17,7 @@ export default function ComboScreenId({attribute, className = '', screenIdAttrib
   if (!hasValue(screenId)) return;
   return (
     <abbr
-      className={`formigo--z-input-lateral absolute top-px flex h-[calc(100%-2px)] items-center pl-1 text-[0.72em] font-medium text-gray-400 ${className}`}
+      className={`absolute top-px z-[var(--z-formigo--input-lateral)] flex h-[calc(100%-2px)] items-center pl-1 text-[0.72em] font-medium text-gray-400 ${className}`}
       style={style}
     >
       {screenId}

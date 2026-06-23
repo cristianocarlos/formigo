@@ -12,7 +12,7 @@ export default function InputPrepend({
   if (!iconElement) return;
   return (
     <span
-      className={`formigo--z-input-lateral peer-focus:text-formigo--theme op-0 absolute left-0 inline-flex h-full items-center justify-center rounded-l-sm text-gray-400 transition-all duration-200 ease-in-out [&>.lucide]:stroke-1 ${className}`}
+      className={`peer-focus:text-formigo--theme op-0 absolute left-0 z-[var(--z-formigo--input-lateral)] inline-flex h-full items-center justify-center rounded-l-sm text-gray-400 transition-all duration-200 ease-in-out [&>.lucide]:stroke-1 ${className}`}
       style={style}
     >
       {iconElement}

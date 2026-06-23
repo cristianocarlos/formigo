@@ -117,7 +117,7 @@ export default function ComboOrSuggestDataList<GOptionData extends TComboOrSugge
   };
   return (
     <div
-      className={`formigo--z-input-picker combo-or-suggest-data-list text-formigo--readable absolute w-full overflow-hidden rounded-sm bg-white shadow-md transition-all duration-200 ease-in-out`}
+      className={`combo-or-suggest-data-list text-formigo--readable absolute z-[var(--z-formigo--input-picker)] w-full overflow-hidden rounded-sm bg-white shadow-md transition-all duration-200 ease-in-out`}
       id={ariaOwnsId}
       role="listbox"
       style={wrapperStyle}
