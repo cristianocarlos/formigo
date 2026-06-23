@@ -77,6 +77,7 @@ import type {
   TCpfInputProps,
   TCurrencyInputProps,
   TDateHourInputProps,
+  TEmailInputProps,
   TPasswordInputProps,
   TTextInputProps,
 } from './lib/types/input';
@@ -158,6 +159,7 @@ export type {
   TCurrencyInputProps,
   TDateHourInputProps,
   TDeleteButtonProps,
+  TEmailInputProps,
   TFormigoAttribute,
   TFormigoFormFeatures,
   TFormigoSubmitEvent,
