@@ -28,7 +28,7 @@ export type THiddenProps<GAttrValue = string | undefined> = {
   value?: string;
 };
 
-type TInputBase = TFormigoElementBase1 &
+export type TBaseInputProps = TFormigoElementBase1 &
   TFormigoElementBase2 & {
     autoComplete?: 'new-password' | 'off'; // Atributo autoComplete
     dataType?: 'skip-url-query-string'; // Identificação adicional (ex. skip-url-query-string)
@@ -40,24 +40,24 @@ type TInputBase = TFormigoElementBase1 &
     refHtmlInput?: RefObject<HTMLInputElement | null>; // Expõe o elemento input
   };
 
-export type TTextInputProps = TInputBase & {
+export type TTextInputProps = TBaseInputProps & {
   handleKeyDown?: TInputKeyboardEventHandler; // handle adicional
   handleKeyUp?: TInputKeyboardEventHandler; // handle key up (quick search)
 };
 
-export type TTextAreaProps = Omit<TInputBase, 'autoComplete' | 'dataType' | 'refHtmlInput'> & {
+export type TTextAreaProps = Omit<TBaseInputProps, 'autoComplete' | 'dataType' | 'refHtmlInput'> & {
   refHtmlTextArea?: RefObject<HTMLTextAreaElement | null>; // Expõe o elemento input
 };
 
-export type TFloatInputProps = TInputBase & {
+export type TFloatInputProps = TBaseInputProps & {
   allowNegative?: boolean;
 };
 
-export type TIntegerInputProps = TInputBase & {
+export type TIntegerInputProps = TBaseInputProps & {
   allowNegative?: boolean; // Permite números negativos
 };
 
-export type TDateInputProps = TInputBase & {
+export type TDateInputProps = TBaseInputProps & {
   handlePick?: (value: TFormattedDate) => void; // handle pick adicional
   hasAgeDesc?: boolean; // Se apresenta a descrição da data
   hasPicker?: boolean; // Se tem um picker
@@ -65,28 +65,22 @@ export type TDateInputProps = TInputBase & {
   resetValueOnPick?: boolean; // Reseta o valor do campo logo após o pick
 };
 
-export type TDateHourInputProps = TInputBase &
+export type TDateHourInputProps = TBaseInputProps &
   Pick<TDateInputProps, 'hasPicker' | 'pickerPosition' | 'resetValueOnPick'> & {
     bookingDataLoad?: TVerticalClockBookingDataLoad; // Carrega expediente e agendamentos
     handlePick?: (value: TFormattedDateHour) => void; // handle pick adicional
   };
 
-export type TPhoneInputProps = TInputBase & {
+export type TPhoneInputProps = TBaseInputProps & {
   countryDataParams?: {attribute: TFormigoAttribute; xhrUrl: string};
 };
 
-export type TZipCodeInputProps = Omit<TInputBase, 'validators'> & {
+export type TZipCodeInputProps = Omit<TBaseInputProps, 'validators'> & {
   handleSearch: (value?: string) => void; // handle search
   handleSearchCancel: () => void; // handle search cancel
 };
 
-export type TPasswordInputProps = Omit<TInputBase, 'datatype' | 'printMode'> & {
+export type TPasswordInputProps = Omit<TBaseInputProps, 'datatype' | 'printMode'> & {
   allowSavingCredentials?: boolean; // Previne o navegador de salvar login e senha
   hasStrenghtMeter?: boolean; // Se tem medidor de força de senha
 };
-
-export type TEmailInputProps = TInputBase;
-export type TCpfInputProps = TInputBase;
-export type TCnpjInputProps = TInputBase;
-export type TCurrencyInputProps = TInputBase;
-export type THourInputProps = TInputBase;

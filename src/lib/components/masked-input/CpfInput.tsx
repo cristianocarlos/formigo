@@ -20,9 +20,9 @@ import {MASKS} from '@/utils/masks';
 
 import useMaskedInputHandlers from './useMaskedInputHandlers';
 
-import type {TCpfInputProps} from '@/lib/types/input';
+import type {TBaseInputProps} from '@/lib/types/input';
 
-export default function CpfInput(props: TCpfInputProps) {
+export default function CpfInput(props: TBaseInputProps) {
   const {
     attribute,
     autoComplete = 'off',

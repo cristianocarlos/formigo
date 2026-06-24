@@ -73,14 +73,7 @@ import type {
   TFormigoValidatorBaseCallerProps,
   TFormigoValidatorGetAttrValue,
 } from './lib/types/formigo';
-import type {
-  TCpfInputProps,
-  TCurrencyInputProps,
-  TDateHourInputProps,
-  TEmailInputProps,
-  TPasswordInputProps,
-  TTextInputProps,
-} from './lib/types/input';
+import type {TBaseInputProps, TDateHourInputProps, TPasswordInputProps, TTextInputProps} from './lib/types/input';
 import type {TInputGroupProps} from './lib/types/inputGroup';
 import type {
   TRadioGroupDerivableOptionsResolverParams,
@@ -148,6 +141,7 @@ export {
 };
 export type {
   TAddressProps,
+  TBaseInputProps,
   TCheckGroupDerivableOptionsResolverParams,
   TCheckGroupProps,
   TCheckGroupValue,
@@ -155,11 +149,8 @@ export type {
   TComboBoxProps,
   TComboOrSuggestPickedData,
   TComboSelectProps,
-  TCpfInputProps,
-  TCurrencyInputProps,
   TDateHourInputProps,
   TDeleteButtonProps,
-  TEmailInputProps,
   TFormigoAttribute,
   TFormigoFormFeatures,
   TFormigoSubmitEvent,

@@ -21,9 +21,9 @@ import {MASKS} from '@/utils/masks';
 
 import useMaskedInputHandlers from './useMaskedInputHandlers';
 
-import type {TCurrencyInputProps} from '@/lib/types/input';
+import type {TBaseInputProps} from '@/lib/types/input';
 
-export default function CurrencyInput(props: TCurrencyInputProps) {
+export default function CurrencyInput(props: TBaseInputProps) {
   const {
     attribute,
     autoComplete = 'off',

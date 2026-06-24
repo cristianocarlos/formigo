@@ -19,9 +19,9 @@ import {useDidMountEffect} from '@/utils/hooks';
 import InputPrint from '../InputPrint';
 import useTextInputHandlers from './useTextInputHandlers';
 
-import type {TEmailInputProps} from '@/lib/types/input';
+import type {TBaseInputProps} from '@/lib/types/input';
 
-export default function EmailInput(props: TEmailInputProps) {
+export default function EmailInput(props: TBaseInputProps) {
   const {
     attribute,
     autoComplete = 'off',
