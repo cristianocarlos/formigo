@@ -9,7 +9,6 @@ import CheckTable from './lib/components/check-table/CheckTable';
 import CheckBox from './lib/components/check/CheckBox';
 import CheckSwitch from './lib/components/check/CheckSwitch';
 import CloudflareTurnstile from './lib/components/CloudflareTurnstile';
-import {COMBO_OR_SUGGEST_VALUE_KEYS} from './lib/components/combo-or-suggest/attributesHelper';
 import ComboBox from './lib/components/combo-or-suggest/ComboBox';
 import ComboSelect from './lib/components/combo-or-suggest/ComboSelect';
 import SuggestBox from './lib/components/combo-or-suggest/SuggestBox';
@@ -99,7 +98,6 @@ export {
   CheckTable,
   CloudflareTurnstile,
   CnpjInput,
-  COMBO_OR_SUGGEST_VALUE_KEYS,
   ComboBox,
   ComboSelect,
   CpfInput,
