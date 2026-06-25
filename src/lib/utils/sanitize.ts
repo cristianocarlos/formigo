@@ -82,9 +82,10 @@ export function sanitizeOneLevelObject<G = unknown>(param: unknown): G {
 
 export function sanitizeFormFeaturesValues(values?: TFormigoFormFeatures['values']) {
   const sanitizedAttr = {} as TDeepSanitizedValues;
-  values &&
+  if (values) {
     Object.keys(values).forEach((modelName) => {
       sanitizedAttr[modelName] = recursiveSanitizeObjectValues(values[modelName]);
     });
+  }
   return sanitizedAttr;
 }

@@ -21,12 +21,15 @@ import FormSection from './lib/components/FormSection';
 import {FormHeading} from './lib/components/FormTitle';
 import Hidden from './lib/components/Hidden';
 import InputGroup from './lib/components/input-group/InputGroup';
+import CnpjInput from './lib/components/masked-input/CnpjInput';
 import CpfInput from './lib/components/masked-input/CpfInput';
 import CurrencyInput from './lib/components/masked-input/CurrencyInput';
 import FloatInput from './lib/components/masked-input/FloatInput';
+import HourInput from './lib/components/masked-input/HourInput';
 import IntegerInput from './lib/components/masked-input/IntegerInput';
 import PasswordInput from './lib/components/password-input/PasswordInput';
 import PhoneGroup from './lib/components/phone-group/PhoneGroup';
+import PhoneInput from './lib/components/phone-input/PhoneInput';
 import QuickSearch from './lib/components/quick-search/QuickSearch';
 import RadioGroup from './lib/components/radio-group/RadioGroup';
 import RadioTable from './lib/components/radio-table/RadioTable';
@@ -95,6 +98,7 @@ export {
   CheckSwitch,
   CheckTable,
   CloudflareTurnstile,
+  CnpjInput,
   COMBO_OR_SUGGEST_VALUE_KEYS,
   ComboBox,
   ComboSelect,
@@ -110,6 +114,7 @@ export {
   FormigoBootstrap,
   FormSection,
   Hidden,
+  HourInput,
   InputGroup,
   IntegerInput,
   ItemSelection,
@@ -117,6 +122,7 @@ export {
   passwordRepeatValidator,
   PHONE_GROUP_KEYS,
   PhoneGroup,
+  PhoneInput,
   QuickSearch,
   RadioGroup,
   RadioTable,

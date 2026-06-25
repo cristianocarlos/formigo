@@ -4,7 +4,7 @@ import YiiLang from '@/utils/yii-lang';
 export const PHONE_HOME = 1008;
 export const PHONE_WORK = 1010;
 export const PHONE_CONTACT = 1009;
-export const PHONE_MOBILE = 1011;
+const PHONE_MOBILE = 1011;
 
 export const HOME_COUNTRY_DATA = {
   dialing_code: 55,

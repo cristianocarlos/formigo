@@ -23,11 +23,9 @@ export default tseslint.config(
       //
       '@eslint-react/dom-no-dangerously-set-innerhtml': ['off'],
       '@eslint-react/naming-convention-ref-name': ['off'],
-      '@eslint-react/no-array-index-key': ['off'],
       '@eslint-react/set-state-in-effect': ['off'],
       '@typescript-eslint/consistent-type-assertions': ['error', {assertionStyle: 'as'}],
       '@typescript-eslint/consistent-type-imports': ['error'],
-      '@typescript-eslint/no-empty-object-type': ['off'],
       '@typescript-eslint/no-inferrable-types': ['error'],
       '@typescript-eslint/no-unused-expressions': ['error', {allowShortCircuit: true}], // Permite &&
       '@typescript-eslint/no-unused-vars': [

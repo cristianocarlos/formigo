@@ -46,7 +46,7 @@ export default function useTextInputHandlers(params: TUseTextInputHandlers) {
   const inputFocus = (focusOptions?: FocusOptions) => {
     window.setTimeout(() => {
       // Pra focar no F5, há um atrazo curioso no primeiro carregamento
-      refHtmlInput.current && refHtmlInput.current.focus(focusOptions);
+      refHtmlInput.current?.focus(focusOptions);
     });
   };
 

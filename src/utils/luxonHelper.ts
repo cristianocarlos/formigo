@@ -83,7 +83,7 @@ function parseStringLuxon(value: null | number | string | undefined) {
 function parseAnyLuxon(value: TLuxonParam, minValidMillis = MIN_VALID_MILLIS) {
   // undefined, null, ''
   if (!value) return DateTime.invalid('!value');
-  let valueLuxon: DateTime<false> | DateTime<true>;
+  let valueLuxon: DateTime<boolean>;
   if (value instanceof DateTime) {
     valueLuxon = value;
   } else if (typeof value === 'number') {

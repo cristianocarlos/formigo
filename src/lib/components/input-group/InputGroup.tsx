@@ -102,7 +102,8 @@ export default function InputGroup(props: TInputGroupProps) {
           handleRemove={handleRemove}
           index={index}
           itemAttribute={itemAttribute}
-          key={index} // NECESSÁRIO uso do índice do array. Na remoção as linhas devem ser renovadas */
+          // eslint-disable-next-line @eslint-react/no-array-index-key
+          key={index} // NECESSÁRIO uso do índice do array. Na remoção as linhas devem ser renovadas
           preventRemove={preventRemove}
           printMode={printMode}
           readOnly={readOnly}

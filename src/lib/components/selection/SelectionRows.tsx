@@ -11,6 +11,7 @@ export default function SelectionRows({renderer}: TSelectionRowsProps) {
     <ul>
       {rows.map((data, index) => {
         return (
+          // eslint-disable-next-line @eslint-react/no-array-index-key
           <li className="flex hover:bg-gray-50 hover:[&>button]:inline!" key={index}>
             <div className="flex-1 leading-tight">
               {renderer({data, rowAttribute: [...attribute, index.toString()]})}
