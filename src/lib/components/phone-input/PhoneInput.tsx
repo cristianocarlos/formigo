@@ -153,7 +153,7 @@ export default function PhoneInput(props: TPhoneInputProps) {
     <InputWrapper
       attribute={attribute}
       className={className}
-      data-test="form-element-phone-input"
+      data-test="formigo-test--phone-input"
       inputId={initProps.id}
       label={label}
       labelHint={labelHint}

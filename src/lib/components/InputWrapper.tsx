@@ -1,4 +1,5 @@
-import Label from '@/lib/components/Label';
+import FormElement from '@/lib/components/FormElement';
+import InputLabel from '@/lib/components/InputLabel';
 import OptimisticError from '@/lib/components/OptimisticError';
 
 import type {TFormigoAttribute, TFormigoLabel} from '@/lib/types/formigo';
@@ -12,14 +13,14 @@ type TProps = ComponentProps<'div'> & {
 };
 
 export default function InputWrapper(props: TProps) {
-  const {attribute, children, className, inputId, label, labelHint, ...htmlDataAttributeProps} = props;
+  const {attribute, children, className = '', inputId, label, labelHint, ...htmlDataAttributeProps} = props;
   return (
-    <div {...htmlDataAttributeProps} className={`formigo--element ${className}`}>
-      <Label className="formigo--input-label" htmlFor={inputId} labelHint={labelHint}>
+    <FormElement {...htmlDataAttributeProps} className={className}>
+      <InputLabel hint={labelHint} htmlFor={inputId}>
         {label}
-      </Label>
+      </InputLabel>
       {children}
       <OptimisticError attribute={attribute} />
-    </div>
+    </FormElement>
   );
 }

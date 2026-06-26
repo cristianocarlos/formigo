@@ -58,7 +58,7 @@ export default function DerivableOptions<GOptionData>(props: TProps<GOptionData>
         return (
           <div key={dataId}>
             {optionElement}
-            <div className="ml-6 [&>.formigo--element]:mb-0!">{derivedElement}</div>
+            <div className="ml-6 [&>.formigo--form-element]:mb-0!">{derivedElement}</div>
           </div>
         );
       })}

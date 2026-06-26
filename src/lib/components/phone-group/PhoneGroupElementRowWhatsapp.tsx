@@ -1,3 +1,4 @@
+import FormElement from '@/lib/components/FormElement';
 import {PHONE_GROUP_KEYS} from '@/lib/utils/phoneHelper';
 import {resolveWhatsappSendUrl} from '@/lib/utils/phoneHelper';
 import {useSelectorFormigoAttrValue} from '@/lib/zustand/hooks';
@@ -20,8 +21,8 @@ export default function PhoneGroupElementRowWhatsapp({className = '', itemAttrib
   const countryData = whatsappData[PHONE_GROUP_KEYS.countryData];
   if (!isValidPhoneNumber(whatsappData[PHONE_GROUP_KEYS.number], countryData?.id)) return;
   return (
-    <div className={`formigo--element ${className}`}>
+    <FormElement className={className}>
       <WhatsappLink href={resolveWhatsappSendUrl(whatsappData)} />
-    </div>
+    </FormElement>
   );
 }

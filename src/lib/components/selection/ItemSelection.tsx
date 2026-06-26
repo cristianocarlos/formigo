@@ -12,7 +12,7 @@ type TItemSelectionProps = {
 };
 
 export default function ItemSelection(props: TItemSelectionProps) {
-  const {attribute, className, label, xhrUrl} = props;
+  const {attribute, className = '', label, xhrUrl} = props;
   return (
     <Selection attribute={attribute} className={className}>
       <Selection.Chooser

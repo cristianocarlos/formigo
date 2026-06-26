@@ -33,7 +33,7 @@ export default function PhoneGroup(props: TPhoneGroupProps) {
   return (
     <InputGroup
       {...componentProps}
-      data-test="form-element-phone-group"
+      data-test="formigo-test--phone-group"
       disabled={disabled}
       getItemEmptyValue={getItemEmptyValue}
       printMode={printMode}

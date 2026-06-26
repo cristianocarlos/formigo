@@ -214,7 +214,7 @@ export default function ComboSelect<GOptionData extends TComboOrSuggestOptions[n
     <InputWrapper
       attribute={attribute}
       className={classNameSet}
-      data-test="form-element-combo-select"
+      data-test="formigo-test--combo-select"
       inputId={initProps.id}
       label={label}
       labelHint={labelHint}

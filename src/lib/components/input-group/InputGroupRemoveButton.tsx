@@ -3,7 +3,7 @@ import XIconButton from '@/components/XIconButton';
 import type {TButtonMouseEventHandler} from '@/types/common';
 
 export default function InputGroupRemoveButton({
-  className,
+  className = '',
   handleRemove,
   index,
 }: {

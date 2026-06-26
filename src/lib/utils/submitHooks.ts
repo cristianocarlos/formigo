@@ -11,7 +11,7 @@ export const preventDoubleSubmissionDebounce = esToolkitDebounce((target: HTMLBu
   target.title = '';
 }, 5000);
 
-function prepareSubmit(e?: TFormigoSubmitEvent) {
+export function prepareSubmit(e?: TFormigoSubmitEvent) {
   let skipValidate = false;
   if (e) {
     e.preventDefault();

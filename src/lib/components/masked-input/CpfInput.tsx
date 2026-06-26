@@ -26,7 +26,7 @@ export default function CpfInput(props: TBaseInputProps) {
   const {
     attribute,
     autoComplete = 'off',
-    className,
+    className = '',
     dataType,
     disabled,
     forceValidateOnSubmit,

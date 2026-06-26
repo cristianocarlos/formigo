@@ -1,3 +1,5 @@
+import FormElement from '@/lib/components/FormElement';
+import InputLabel from '@/lib/components/InputLabel';
 import {resolveGroupRows} from '@/lib/utils/helper';
 import {useDispatchFormigoProduceFormState, useSelectorFormigoInputReadyValue} from '@/lib/zustand/hooks';
 import {valueAsNumber} from '@/utils/helper';
@@ -15,7 +17,7 @@ export default function InputGroup(props: TInputGroupProps) {
     addLimit,
     attribute,
     children,
-    className,
+    className = '',
     disabled,
     getItemEmptyValue,
     initValue,
@@ -128,14 +130,14 @@ export default function InputGroup(props: TInputGroupProps) {
 
   // Não precisa usar o FieldsetWrapper, ele só ajuda na representação dos erros que aqui é no próprio componente
   const resolvedHtmlDataAttributeProps = {
-    'data-test': 'form-element-input-group',
+    'data-test': 'formigo-test--input-group',
     ...htmlDataAttributeProps,
   };
   return (
-    <div {...resolvedHtmlDataAttributeProps} className={`formigo--element ${className}`}>
-      {resolvedLabel ? <label className="formigo--input-label">{resolvedLabel}</label> : undefined}
+    <FormElement {...resolvedHtmlDataAttributeProps} className={className}>
+      {resolvedLabel ? <InputLabel>{resolvedLabel}</InputLabel> : undefined}
       <div className="flex flex-col gap-4">{renderList()}</div>
       {renderAddButton()}
-    </div>
+    </FormElement>
   );
 }

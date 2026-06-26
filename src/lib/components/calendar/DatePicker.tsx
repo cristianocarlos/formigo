@@ -30,7 +30,15 @@ function resolveSelectedValueLuxon(value?: string) {
 }
 
 export default function DatePicker(props: TProps) {
-  const {className, handleOutsideClick, handlePick, isOpen, pickerPosition = 'left', refHtmlDivDropdown, value} = props;
+  const {
+    className = '',
+    handleOutsideClick,
+    handlePick,
+    isOpen,
+    pickerPosition = 'left',
+    refHtmlDivDropdown,
+    value,
+  } = props;
 
   useOutsideClickEffect(
     refHtmlDivDropdown,

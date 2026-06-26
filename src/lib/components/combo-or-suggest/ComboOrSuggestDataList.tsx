@@ -57,7 +57,7 @@ export default function ComboOrSuggestDataList<GOptionData extends TComboOrSugge
     for (let i = 0; i < optionsLength; i++) {
       // o for é mais veloz que o forEach
       const data = options[i];
-      if (data.error_message) {
+      if (data.error_message !== undefined) {
         optionList.push(
           <li
             className="flex items-center gap-2 bg-red-400 px-4 py-2 text-white"
@@ -124,7 +124,7 @@ export default function ComboOrSuggestDataList<GOptionData extends TComboOrSugge
     >
       {isOpen ? (
         <ComboOrSuggestDataListScroller limit={scrollerXhrLimit} loadMoreData={scrollerLoadMore} style={scrollerStyle}>
-          <ul data-test="combo-or-suggest-data-list-items">{renderOptions()}</ul>
+          <ul data-test="formigo-test--combo-or-suggest-data-list-items">{renderOptions()}</ul>
         </ComboOrSuggestDataListScroller>
       ) : undefined}
     </div>

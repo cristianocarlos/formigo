@@ -12,7 +12,10 @@ export default function ErrorSummary({className}: {className?: string}) {
   const validatorHasMessage = useSelectorFormigoValidatorHasMessage();
   if (!validatorHasMessage) return;
   return (
-    <div className={`formigo--message-warning flex items-center gap-2 text-sm ${className}`} role="alert">
+    <div
+      className={`flex items-center gap-2 rounded border border-yellow-200 bg-yellow-100 p-4 text-sm text-yellow-800 ${className}`}
+      role="alert"
+    >
       <AlertTriangleIcon className="size-8! stroke-1" />
       {YiiLang.formigo('feedbackFormValidatorErrors')}
     </div>

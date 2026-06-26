@@ -9,7 +9,7 @@ function TitleElement({children, className, tagName}: TTitleProps) {
   return createElement(tagName, {className}, children);
 }
 
-function Title({children, className, tagName}: TTitleProps) {
+function Title({children, className = '', tagName}: TTitleProps) {
   return (
     <TitleElement className={`flex items-center gap-2 ${className}`} tagName={tagName}>
       <hr className="w-2 flex-none border-gray-300" />

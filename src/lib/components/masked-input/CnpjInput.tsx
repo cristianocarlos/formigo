@@ -25,7 +25,7 @@ export default function CnpjInput(props: TBaseInputProps) {
   const {
     attribute,
     autoComplete = 'off',
-    className,
+    className = '',
     dataType,
     disabled,
     forceValidateOnSubmit,

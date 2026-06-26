@@ -42,7 +42,12 @@ import Formigo from './lib/Formigo';
 import FormigoBootstrap from './lib/FormigoBootstrap';
 import {CHECK_BOOL_TRUE} from './lib/utils/checkOrRadio';
 import {PHONE_GROUP_KEYS} from './lib/utils/phoneHelper';
-import {customActionSubmit, useHandleFetchSubmit, useHandleValidateSubmit} from './lib/utils/submitHooks';
+import {
+  customActionSubmit,
+  prepareSubmit,
+  useHandleFetchSubmit,
+  useHandleValidateSubmit,
+} from './lib/utils/submitHooks';
 import {passwordRepeatValidator} from './lib/utils/validators';
 import {useFormigoContextIsNewRecord, useFormigoContextModelValues} from './lib/utils/withContext';
 import {
@@ -121,6 +126,7 @@ export {
   PHONE_GROUP_KEYS,
   PhoneGroup,
   PhoneInput,
+  prepareSubmit,
   QuickSearch,
   RadioGroup,
   RadioTable,

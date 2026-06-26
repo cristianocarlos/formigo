@@ -129,7 +129,7 @@ function getHourValues(
 }
 
 export default function VerticalClockCalendar(props: IPVerticalClockCalendar) {
-  const {bookingDataLoad, className, handlePick: propHandlePick, value} = props;
+  const {bookingDataLoad, className = '', handlePick: propHandlePick, value} = props;
 
   const abortControllerRef = useRef(new AbortController());
 

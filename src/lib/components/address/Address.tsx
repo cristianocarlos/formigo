@@ -31,7 +31,7 @@ function getEmptyValue() {
 }
 
 export default function Address(props: TAddressProps) {
-  const {cityXhrUrl, className, countryXhrUrl, initValue, refComponent, zipCodeXhrUrl, ...addressProps} = props;
+  const {cityXhrUrl, className = '', countryXhrUrl, initValue, refComponent, zipCodeXhrUrl, ...addressProps} = props;
 
   const {attribute, disabled, printMode, readOnly, required, validateOnlyOnSubmit} = addressProps;
 

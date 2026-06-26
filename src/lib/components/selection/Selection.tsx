@@ -1,5 +1,6 @@
 import {useCallback, useState} from 'react';
 
+import FormElement from '@/lib/components/FormElement';
 import SelectionChooser from '@/lib/components/selection/SelectionChooser';
 import {SelectionContext} from '@/lib/components/selection/SelectionContext';
 import SelectionRows from '@/lib/components/selection/SelectionRows';
@@ -54,7 +55,7 @@ export default function Selection(props: TSelectionProps) {
 
   return (
     <SelectionContext value={{attribute, handleAdd, handleRemove, rows}}>
-      <div className={`formigo--element [&>.formigo--element]:mb-0 ${className}`}>{children}</div>
+      <FormElement className={`[&>.formigo--form-element]:mb-0 ${className}`}>{children}</FormElement>
     </SelectionContext>
   );
 }

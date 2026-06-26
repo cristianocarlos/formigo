@@ -22,7 +22,7 @@ type IPDateHourPicker = {
 export default function DateHourPicker(props: IPDateHourPicker) {
   const {
     bookingDataLoad,
-    className,
+    className = '',
     handleOutsideClick,
     handlePick,
     isOpen,

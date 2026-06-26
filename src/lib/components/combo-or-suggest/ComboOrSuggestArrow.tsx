@@ -19,7 +19,7 @@ export default function ComboOrSuggestArrow(props: IPComboOrSuggestArrow) {
   const isLoading = useSelectorFormigoLoadingValue(attribute);
 
   return (
-    <label data-test="combo-or-suggest-arrow" onMouseDown={handleClick} role="button" style={style}>
+    <label data-test="formigo-test--combo-or-suggest-arrow" onMouseDown={handleClick} role="button" style={style}>
       <LoaderIcon className={`absolute ${isLoading ? 'animate-spin' : 'invisible'}`} />
       <ChevronDownIcon
         className={`${isOpen ? 'rotate-180 transition-all duration-200 ease-in-out' : ''} ${isLoading ? 'invisible' : ''}`}

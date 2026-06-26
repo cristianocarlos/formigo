@@ -10,7 +10,7 @@ type TProps = ComponentProps<'button'> & {
   dialogTitle: TDialogProps['title'];
 };
 
-export default function DialogButton({children, className, dialogRenderer, dialogTitle}: TProps) {
+export default function DialogButton({children, className = '', dialogRenderer, dialogTitle}: TProps) {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(true);
@@ -20,7 +20,7 @@ export default function DialogButton({children, className, dialogRenderer, dialo
   };
   return (
     <>
-      <button className={`${className}`} onClick={handleOpen} type="button">
+      <button className={className} onClick={handleOpen} type="button">
         {children}
       </button>
       <Dialog handleClose={handleClose} isOpen={isOpen} title={dialogTitle}>

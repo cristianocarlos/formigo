@@ -107,7 +107,7 @@ export default function RadioGroup<GOptionData extends TRadioGroupOptionRows[num
       <FieldsetWrapper
         attribute={attribute}
         className={`${printMode ? 'grayscale-100' : ''} ${className}`}
-        data-test="form-element-radio-group"
+        data-test="formigo-test--radio-group"
         legend={label}
         role="radiogroup"
       >

@@ -137,7 +137,7 @@ export default function ZipCodeInput(props: TZipCodeInputProps) {
     <InputWrapper
       attribute={attribute}
       className={className}
-      data-test="form-element-zip-code-input"
+      data-test="formigo-test--zip-code-input"
       inputId={initProps.id}
       label={label}
       labelHint={labelHint}

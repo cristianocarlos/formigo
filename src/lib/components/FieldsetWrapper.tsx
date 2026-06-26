@@ -1,3 +1,5 @@
+import FormElement from '@/lib/components/FormElement';
+import InputLabel from '@/lib/components/InputLabel';
 import OptimisticError from '@/lib/components/OptimisticError';
 
 import type {TFormigoAttribute, TFormigoLabel} from '@/lib/types/formigo';
@@ -11,10 +13,14 @@ type TFieldWrapperProps = ComponentProps<'fieldset'> & {
 export default function FieldsetWrapper(props: TFieldWrapperProps) {
   const {attribute, children, className = '', legend, ...htmlDataAttributeProps} = props;
   return (
-    <fieldset {...htmlDataAttributeProps} className={`formigo--element has-[.optimistic-error]:shadow-xl ${className}`}>
-      {legend ? <legend className="formigo--input-label">{legend}</legend> : undefined}
+    <FormElement
+      {...htmlDataAttributeProps}
+      className={`has-[.optimistic-error]:shadow-xl ${className}`}
+      tagName="fieldset"
+    >
+      {legend ? <InputLabel tagName="legend">{legend}</InputLabel> : undefined}
       {children}
       <OptimisticError attribute={attribute} />
-    </fieldset>
+    </FormElement>
   );
 }
